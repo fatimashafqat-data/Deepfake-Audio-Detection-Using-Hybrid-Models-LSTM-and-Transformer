@@ -1,0 +1,34 @@
+{
+  "model_info": {
+    "name": "Hybrid (LSTM+Transformer)",
+    "architecture": "Bidirectional LSTM + Multi-head Attention",
+    "input_shape": [
+      10,
+      128
+    ],
+    "feature_extraction": "Librosa-based features (VGGish fallback)",
+    "training_device": "cuda",
+    "pytorch_version": "2.5.1+cu121"
+  },
+  "performance": {
+    "accuracy": 0.9864888888888889,
+    "precision": 0.988640778918017,
+    "recall": 0.9974404501118362,
+    "f1_score": 0.9930211202938476,
+    "far": 0.30434782608677013,
+    "frr": 0.0025595498881637526
+  },
+  "data_info": {
+    "feature_dimension": 128,
+    "target_sample_rate": 16000,
+    "test_samples": 10,
+    "total_features": 45000
+  },
+  "verification": {
+    "scaler_consistency": true,
+    "model_consistency": true,
+    "test_prediction_sample": 0.9999982118606567,
+    "verification_timestamp": null
+  },
+  "deployment_ready": true
+}
